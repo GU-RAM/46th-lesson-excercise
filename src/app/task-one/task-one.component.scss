@@ -1,0 +1,35 @@
+.task-one-main {
+  margin-left: 150px;
+  margin-top: 50px;
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  &-button {
+    background-color: rgb(141, 29, 247);
+    margin-bottom: 50px;
+  }
+
+  &-names {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  &-content {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-left: 0;
+    margin-left: 50px;
+
+    li {
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}

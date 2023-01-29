@@ -1,0 +1,28 @@
+<h1>Task 1</h1>
+<div class="task-one-main">
+  <button class="task-one-main-button" (click)="appService.showListFn()">
+    Load Users
+  </button>
+  <div class="task-one-main-loading" *ngIf="appService.showLoading">
+    Loading ...
+  </div>
+  <div class="task-one-main-empty-content" *ngIf="appService.empty">
+    List is empty
+  </div>
+  <div class="task-one-main-names" *ngIf="appService.showList">
+    Users: {{ appService.userArr | userName }}
+  </div>
+  <ul class="task-one-main-content" *ngIf="appService.showList">
+    <li
+      class="status"
+      *ngFor="let user of userArr"
+      appHighlight
+      [status]="user.status"
+    >
+      <p>{{ user.firstName }} {{ user.lastName }}</p>
+      <p>About {{ user.firstName }}</p>
+      <p>{{ user.birthDate | calculateAge }} years old</p>
+      <button>{{ user.status }}</button>
+    </li>
+  </ul>
+</div>
