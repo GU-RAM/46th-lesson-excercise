@@ -1,0 +1,11 @@
+<h1>Task 2</h1>
+<div class="task-two-main">
+  <ul class="task-two-main-list">
+    <li
+      class="square"
+      #listItem
+      *ngFor="let item of appService.listItems; let i = index"
+      (mouseover)="taskTwoChangeBgColor(i)"
+    ></li>
+  </ul>
+</div>

@@ -31,7 +31,6 @@ export class HighlightDirective implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.status);
     switch (this.status) {
       case 'deleted':
         this.elementRef.nativeElement.style.backgroundColor =

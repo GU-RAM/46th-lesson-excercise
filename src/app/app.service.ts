@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { ElementRef, Injectable, OnDestroy } from '@angular/core';
 
 enum Status {
   Deleted = 'deleted',
@@ -9,7 +9,7 @@ enum Status {
 @Injectable({
   providedIn: 'root',
 })
-export class AppService {
+export class AppService implements OnDestroy {
   userArr = [
     {
       firstName: 'Giorgi',
@@ -47,4 +47,8 @@ export class AppService {
       this.showLoading = false;
     }, 1000);
   }
+
+  listItems = Array(49).fill('');
+
+  ngOnDestroy() {}
 }

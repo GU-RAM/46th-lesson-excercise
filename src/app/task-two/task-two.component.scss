@@ -1,0 +1,17 @@
+.task-two-main {
+  margin-top: 50px;
+  max-width: 1000px;
+
+  ul {
+    list-style-type: none;
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+
+    li {
+      background-color: green;
+      height: 30px;
+    }
+  }
+}
