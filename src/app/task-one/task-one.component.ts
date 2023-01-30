@@ -7,10 +7,15 @@ import { AppService } from '../app.service';
   styleUrls: ['./task-one.component.scss'],
 })
 export class TaskOneComponent {
-  get userArr() {
-    return this.appService.userArr;
-  }
+  isLoading = false;
+  userArr: any[] = [];
   constructor(public appService: AppService) {}
+
+  async loadUsers() {
+    this.isLoading = true;
+    this.userArr = await this.appService.getUsers();
+    this.isLoading = false;
+  }
 
   ngOnInit(): void {}
 }

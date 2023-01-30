@@ -26,7 +26,7 @@ export class HighlightDirective implements OnInit {
   }
 
   @HostListener('click')
-  changeColorToYellor() {
+  changeColorToYellow() {
     this.elementRef.nativeElement.style.backgroundColor = 'yellow';
   }
 

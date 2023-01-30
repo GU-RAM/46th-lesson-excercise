@@ -5,11 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class UserNamePape implements PipeTransform {
   transform(usersArr: any) {
-    let names = '';
-
-    usersArr.forEach((user: any) => (names += user.firstName + ', '));
-
-    // usersArr.map((user: any) => user.firstName);
-    return names;
+    return usersArr.map((user: any) => user.firstName).join(', ');
   }
 }

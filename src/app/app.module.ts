@@ -2,12 +2,13 @@ import { NgModule, ElementRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HighlightDirective } from './highlight.directive';
-import { CalculateAgePipe } from './calculate-age.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
+import { CalculateAgePipe } from './pipes/calculate-age.pipe';
 import { TaskOneComponent } from './task-one/task-one.component';
-import { UserNamePape } from './userNames.pipe';
+import { UserNamePape } from './pipes/userNames.pipe';
 import { TaskTwoComponent } from './task-two/task-two.component';
 import { AppService } from './app.service';
+import { bgColorChangeDirective } from './directives/bgColorChange.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppService } from './app.service';
     CalculateAgePipe,
     UserNamePape,
     TaskTwoComponent,
+    bgColorChangeDirective,
   ],
   imports: [BrowserModule],
   providers: [AppService, { provide: ElementRef, useValue: {} }],

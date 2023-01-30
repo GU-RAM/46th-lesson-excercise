@@ -13,14 +13,5 @@ import { AppService } from '../app.service';
   styleUrls: ['./task-two.component.scss'],
 })
 export class TaskTwoComponent {
-  @ViewChildren('listItem') listItems: QueryList<ElementRef> | undefined;
-
   constructor(public appService: AppService) {}
-
-  taskTwoChangeBgColor(i: number) {
-    if (this.listItems) {
-      console.log(this.listItems);
-      this.listItems.toArray()[i].nativeElement.style.backgroundColor = 'red';
-    }
-  }
 }

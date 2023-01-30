@@ -1,18 +1,17 @@
 <h1>Task 1</h1>
 <div class="task-one-main">
-  <button class="task-one-main-button" (click)="appService.showListFn()">
-    Load Users
-  </button>
-  <div class="task-one-main-loading" *ngIf="appService.showLoading">
-    Loading ...
-  </div>
-  <div class="task-one-main-empty-content" *ngIf="appService.empty">
+  <button class="task-one-main-button" (click)="loadUsers()">Load Users</button>
+  <div class="task-one-main-loading" *ngIf="isLoading">Loading ...</div>
+  <div
+    class="task-one-main-empty-content"
+    *ngIf="!isLoading && !userArr.length"
+  >
     List is empty
   </div>
-  <div class="task-one-main-names" *ngIf="appService.showList">
-    Users: {{ appService.userArr | userName }}
+  <div class="task-one-main-names" *ngIf="userArr.length">
+    Users: {{ userArr | userName }}
   </div>
-  <ul class="task-one-main-content" *ngIf="appService.showList">
+  <ul class="task-one-main-content" *ngIf="userArr.length">
     <li
       class="status"
       *ngFor="let user of userArr"
